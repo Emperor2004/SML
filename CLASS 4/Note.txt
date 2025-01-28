@@ -1,0 +1,14 @@
+MULTIPLE LINEAR REGRESSION
+
+VIF - Variance Inflation Factor - It only works with 'x'- How the change in one independent variable affect other independent variable
+
+Y = B0 + B1x1 + B2x2 + ... + e
+
+B0 = y-intercept
+B1, B2 ... = Slopes
+e = model error
+
+VIF starts at 1 and has no upper limit
+VIF exceeding 5 indicate high multicolinearlity
+
+VIF = 1/(1-(Ri)^2)
