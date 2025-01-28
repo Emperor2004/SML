@@ -9,6 +9,12 @@ B1, B2 ... = Slopes
 e = model error
 
 VIF starts at 1 and has no upper limit
-VIF exceeding 5 indicate high multicolinearlity
+VIF between 1 and 5 means moderate multicolinearlity which is not an issue
+VIF exceeding 5 indicate high multicolinearlity and it becomes a problem
 
 VIF = 1/(1-(Ri)^2)
+
+To reduce VIF:
+1) Feature Selection
+2) PCA
+3) Regularisation Technique
