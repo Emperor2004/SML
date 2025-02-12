@@ -1,0 +1,20 @@
+OVERFITTING:- Learning too much from training data compared to testing data
+UNDERFITTING:- Learning too low from training data compared to testing data
+
+REGULARISATION:- This set restriction/penalty on training and testing data
+
+Types (Stricter Linear Regression):-
+1. Ridge Regression - will try to make the co-efficients 0 but will never make them 0.
+2. Lasso Regression - will make the co-efficients 0.
+
+They reduce the co-efficients of 'X's to near 0 so that their effect on the equation become less. 
+
+Ridge will try to make the co-efficients 0 but will never make them 0.
+Lasso will make the co-efficients 0.
+
+# Search Regularisation, Ridge, Lasso, GridSearchCV, Negetive MSE, Cross Validation #
+
+In KNN, 'k' is the hyperparameter.
+
+# How to apply Elastic Net #
+
