@@ -1,0 +1,19 @@
+Using both MinMaxScaler and StandardScaler together is sometimes required because they serve different purposes, and combining them can improve the performance of machine learning models in certain cases.
+
+Why Use Both?
+Handling Different Feature Distributions
+
+MinMaxScaler scales features to a fixed range [0,1] or [−1,1], which is useful when features have different dynamic ranges.
+StandardScaler standardizes features to have zero mean and unit variance (𝜇=0,𝜎=1), which is useful when data follows a normal distribution.
+When features have different types of distributions, applying both scalers can ensure better transformation.
+
+Improving Model Convergence
+
+Some machine learning algorithms (like neural networks) perform better with normalized input (MinMax) and standardized features (StandardScaler).
+Applying MinMaxScaler first followed by StandardScaler ensures that data is well-conditioned for gradient-based optimizations.
+
+Avoiding Outlier Influence
+
+MinMaxScaler is sensitive to outliers because it maps everything between a fixed range based on the min and max values.
+StandardScaler reduces outlier influence by transforming data based on standard deviation.
+Combining both can balance between normalization and robustness to outliers.
