@@ -1,0 +1,93 @@
+ENSEMBLE LEARNING
+- Ensemble learning is a machine learning technique that combines predictions from multiple models to improve accuracy and robustness.
+- It leverages the strengths of individual models while mitigating their weaknesses.
+- Common ensemble methods include Bagging, Boosting, and Stacking.
+
+TYPES OF ENSEMBLE METHODS:
+1. Bagging (Bootstrap Aggregating):
+    - Reduces variance by training multiple models on different subsets of the data.
+    - Example: Random Forest.
+
+2. Boosting:
+    - Reduces bias by sequentially training models, where each model corrects the errors of the previous one.
+    - Example: Gradient Boosting, AdaBoost.
+
+3. Stacking:
+    - Combines predictions from multiple models using a meta-model to improve performance.
+    - Example: Using Logistic Regression as a meta-model over predictions from Decision Trees and SVM.
+
+BENEFITS:
+- Improves model performance and generalization.
+- Reduces the risk of overfitting compared to individual models.
+- Robust to noise and outliers.
+
+LIMITATIONS:
+- Computationally expensive due to training multiple models.
+- Requires careful tuning of hyperparameters for optimal performance.
+
+
+
+
+RANDOM FOREST
+- Random Forest is an ensemble learning method used for classification and regression tasks.
+- It operates by constructing multiple decision trees during training and outputs the mode of the classes (classification) or mean prediction (regression) of the individual trees.
+- It reduces overfitting by averaging multiple trees, improving generalization.
+- Random Forest uses a technique called "bagging" (Bootstrap Aggregating) to train each tree on a random subset of the data.
+- It also selects a random subset of features for splitting nodes, ensuring diversity among trees.
+- Handles missing data and maintains accuracy for large datasets.
+- Robust to noise and outliers in the dataset.
+- Provides feature importance scores, helping in feature selection.
+- Computationally intensive for large datasets with many trees.
+- Commonly used in applications like fraud detection, recommendation systems, and medical diagnosis.
+
+HYPERPARAMETES:-
+- Number of Trees (`n_estimators`): The number of decision trees in the forest.
+- Maximum Depth (`max_depth`): The maximum depth of each tree.
+- Minimum Samples Split (`min_samples_split`): The minimum number of samples required to split an internal node.
+- Minimum Samples Leaf (`min_samples_leaf`): The minimum number of samples required to be at a leaf node.
+
+OTHER PARAMETERS:-
+- Maximum Features (`max_features`): The number of features to consider when looking for the best split.
+- Bootstrap (`bootstrap`): Whether to use bootstrapped samples when building trees.
+- Random State (`random_state`): Controls the randomness of the estimator for reproducibility.
+- Criterion (`criterion`): The function to measure the quality of a split (e.g., "gini" for Gini impurity or "entropy" for information gain).
+- Max Samples (`max_samples`): The number of samples to draw from the dataset to train each tree (if bootstrap is True).
+
+
+
+
+
+ADABOOST
+- AdaBoost (Adaptive Boosting) is an ensemble learning method that combines multiple weak classifiers to create a strong classifier.
+- It works by sequentially training weak classifiers, where each classifier focuses on the errors made by the previous ones.
+- Assigns higher weights to misclassified samples, making them more influential in subsequent iterations.
+- Commonly used with decision stumps (single-level decision trees) as weak classifiers.
+- Sensitive to noisy data and outliers, as it assigns higher weights to misclassified samples.
+- Requires careful tuning of the number of estimators to avoid overfitting.
+
+HYPERPARAMETERS:
+- Number of Estimators (`n_estimators`): The maximum number of weak classifiers to train.
+- Learning Rate (`learning_rate`): Shrinks the contribution of each weak classifier, controlling the trade-off between the number of estimators and their individual impact.
+- Base Estimator (`base_estimator`): The type of weak classifier to use (e.g., decision stumps).
+
+
+
+
+
+XGBOOST
+- XGBoost (Extreme Gradient Boosting) is an advanced implementation of gradient boosting designed for speed and performance.
+- It uses a more regularized model formalization to control overfitting and improve generalization.
+- Supports parallel processing, making it faster than traditional gradient boosting methods.
+- Handles missing data internally and provides built-in cross-validation.
+- Offers features like tree pruning, regularization, and early stopping to optimize performance.
+- Widely used in machine learning competitions and real-world applications like finance, healthcare, and recommendation systems.
+
+HYPERPARAMETERS:
+- Number of Estimators (`n_estimators`): The number of boosting rounds.
+- Learning Rate (`learning_rate`): Controls the contribution of each tree.
+- Maximum Depth (`max_depth`): The maximum depth of each tree.
+- Subsample (`subsample`): The fraction of samples used for training each tree.
+- Colsample by Tree (`colsample_bytree`): The fraction of features used for training each tree.
+- Regularization Parameters (`lambda`, `alpha`): Control overfitting by adding penalties to the model.
+- Booster (`booster`): The type of booster to use (e.g., "gbtree" for tree-based models or "gblinear" for linear models).
+- Objective (`objective`): The learning task and corresponding loss function (e.g., "reg:squarederror" for regression or "binary:logistic" for binary classification).
