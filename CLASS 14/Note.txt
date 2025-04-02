@@ -4,12 +4,14 @@ ENSEMBLE LEARNING
 - Common ensemble methods include Bagging, Boosting, and Stacking.
 
 TYPES OF ENSEMBLE METHODS:
-1. Bagging (Bootstrap Aggregating):
+1. Bagging (Bootstrap Aggregating) (Parallel):
     - Reduces variance by training multiple models on different subsets of the data.
     - Example: Random Forest.
 
-2. Boosting:
+2. Boosting (Sequential):
     - Reduces bias by sequentially training models, where each model corrects the errors of the previous one.
+    - It has a bass classifier.
+    - We give higher weight to classes those where mis-classified.
     - Example: Gradient Boosting, AdaBoost.
 
 3. Stacking:
@@ -70,6 +72,32 @@ HYPERPARAMETERS:
 - Learning Rate (`learning_rate`): Shrinks the contribution of each weak classifier, controlling the trade-off between the number of estimators and their individual impact.
 - Base Estimator (`base_estimator`): The type of weak classifier to use (e.g., decision stumps).
 
+
+
+GRADIENT BOOSTING
+- Gradient Boosting is an ensemble learning method that builds models sequentially, where each model corrects the errors of the previous one.
+- It minimizes a loss function by combining weak learners (e.g., decision trees) in a stage-wise manner.
+- Works well with structured data and is effective for both classification and regression tasks.
+- Sensitive to overfitting if the number of estimators is too high or if the model is not regularized.
+
+HYPERPARAMETERS:
+- Number of Estimators (`n_estimators`): The number of boosting stages to perform.
+- Learning Rate (`learning_rate`): Shrinks the contribution of each tree, controlling the trade-off between the number of estimators and their individual impact.
+- Maximum Depth (`max_depth`): The maximum depth of each tree.
+- Minimum Samples Split (`min_samples_split`): The minimum number of samples required to split an internal node.
+- Minimum Samples Leaf (`min_samples_leaf`): The minimum number of samples required to be at a leaf node.
+- Subsample (`subsample`): The fraction of samples used for training each tree, controlling overfitting.
+- Loss Function (`loss`): The function to optimize (e.g., "deviance" for classification or "ls" for regression).
+
+BENEFITS:
+- Handles both regression and classification tasks effectively.
+- Can model complex relationships and interactions in the data.
+- Provides feature importance scores for feature selection.
+
+LIMITATIONS:
+- Computationally expensive for large datasets.
+- Sensitive to hyperparameter tuning and overfitting.
+- Requires careful handling of missing data and outliers.
 
 
 
